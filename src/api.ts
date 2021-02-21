@@ -19,7 +19,7 @@ export default (args) => {
     });
 
     return new Promise(resolve => {
-        app.listen(process.env.API_PORT, () => {
+        app.listen(config.apiPort, () => {
             resolve(true);
         });
     });
