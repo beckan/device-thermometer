@@ -10,7 +10,7 @@ type argsType = {
 const temperatureWatch = ({temperature, config}: argsType): void => {
     printMessage.message(`Current temperature: ${temperature}°C`);
 
-    axios.post(process.env.DATA_ENDPOINT, {
+    axios.post(config.dataEndpoint, {
         device: config.deviceId,
         unit: 'celcius',
         value: temperature,
