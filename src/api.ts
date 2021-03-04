@@ -1,4 +1,5 @@
 import express from 'express';
+import cors from 'cors';
 
 export default (args) => {
     const {
@@ -7,6 +8,8 @@ export default (args) => {
     } = args;
 
     const app = express();
+
+    app.use(cors());
 
     app.get('/status', (req, res) => {
         res.send({
