@@ -1,7 +1,7 @@
-import fs from 'fs';
+import fs from "fs";
 
 const doesConfigFileExist = () => {
-    return <boolean>fs.existsSync('./.config.json');
+  return <boolean>fs.existsSync("./.config.json");
 };
 
 export default doesConfigFileExist;
